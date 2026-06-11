@@ -1,19 +1,20 @@
 <style>
-  /* 1. Expand the main header container to fit the portrait */
+  /* 1. Expand the header container to fit the slightly larger portrait */
   .site-header {
     height: auto !important;
-    min-height: 160px !important; 
+    min-height: 180px !important; /* Increased to give the bigger image room */
     padding-top: 20px;
     padding-bottom: 20px;
   }
 
-  /* 2. Explicitly size the empty logo container so the background image shows */
+  /* 2. Size the container into a perfect square, then round the edges */
   .site-logo {
     display: block !important;
-    height: 120px !important; /* Explicit height is required because the container is empty! */
-    width: 100% !important;
-    background-size: contain !important;
-    background-position: left center !important;
+    height: 140px !important; /* Slightly bigger than the previous 120px */
+    width: 140px !important;  /* Must perfectly match the height to make a circle */
+    border-radius: 50% !important; /* This creates the circle shape */
+    background-size: cover !important; /* Ensures the image fills the circle edge-to-edge */
+    background-position: center !important; /* Keeps the portrait perfectly centered */
     background-repeat: no-repeat !important;
   }
 </style>
