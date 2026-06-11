@@ -1,5 +1,5 @@
 <style>
-  /* 1. Expand the header container */
+  /* 1. Expand the header container to fit the larger portrait */
   .site-header {
     height: auto !important;
     min-height: 180px !important; 
@@ -7,19 +7,15 @@
     padding-bottom: 20px;
   }
 
-  /* 2. Reset the link wrapper so it doesn't squish the image */
+  /* 2. Size the background container into a perfect, unsquishable circle */
   .site-logo {
-    display: inline-block !important;
-    height: auto !important;
-    width: auto !important;
-  }
-
-  /* 3. Apply the size and circle effect DIRECTLY to the image */
-  .site-logo img {
+    display: block !important;
     height: 140px !important;
     width: 140px !important;
-    object-fit: cover !important; /* Crops cleanly without stretching */
-    border-radius: 50% !important; /* Makes it a perfect circle */
-    image-rendering: high-quality !important; /* Forces max sharpness */
+    flex-shrink: 0 !important; /* Prevents the theme from squishing the image */
+    border-radius: 50% !important; /* Crops the square into a perfect circle */
+    background-size: cover !important; /* Zooms cleanly edge-to-edge */
+    background-position: center !important; /* Keeps the face centered */
+    background-repeat: no-repeat !important;
   }
 </style>
