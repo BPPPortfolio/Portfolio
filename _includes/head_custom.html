@@ -1,23 +1,22 @@
 <style>
-  /* 1. Force the sidebar header container to expand beyond its default 60px */
-  .side-bar .site-header {
+  /* 1. Force the main header container to expand to fit the portrait */
+  .site-header {
     height: auto !important;
-    min-height: 60px;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    min-height: 160px !important; 
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
-  /* 2. Force the logo link container to display as a block to fit the image */
-  .site-title.site-logo {
+  /* 2. Remove the 24px restriction on the logo link wrapper */
+  .site-logo {
     height: auto !important;
     display: block !important;
   }
 
-  /* 3. Set your portrait size! Change the 120px to make it larger or smaller */
-  .site-title.site-logo img {
+  /* 3. Explicitly force the image itself to scale up to 120px */
+  .site-logo img {
+    height: 120px !important; 
     max-height: 120px !important;
-    max-width: 100% !important;
     width: auto !important;
-    height: auto !important;
   }
 </style>
